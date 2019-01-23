@@ -14,7 +14,6 @@ class Solution:
         d = dict()
         for i, e in enumerate(nums):
             result = target - e
-            # if result in d:
             if result in d:
                 return [d[result], i]
             d[e] = i

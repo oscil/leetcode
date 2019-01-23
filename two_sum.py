@@ -10,6 +10,7 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
+
         d = dict()
         for i, e in enumerate(nums):
             result = target - e

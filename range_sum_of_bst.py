@@ -48,11 +48,13 @@ class Solution:
         :rtype: int
         """
         out = 0
+        if root is None:
+            return out
         if (root.val >= L) and (root.val <= R):
             out += root.val
-        if root.val >= L and root.left:
+        if root.val >= L:
             out += self.rangeSumBST(root.left, L, R)
-        if root.val <= R and root.right:
+        if root.val <= R:
             out += self.rangeSumBST(root.right, L, R)
         return out
 
